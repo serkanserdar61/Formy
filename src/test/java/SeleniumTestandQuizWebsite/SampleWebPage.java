@@ -27,9 +27,9 @@ public class SampleWebPage {
         Assert.assertEquals(result,"Code Test");
         System.out.println(result);
     }
+    @Test
     public void GetColorOfButton(){
-        WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver();
+        GetTitleOfPage();
         WebElement button=driver.findElement(By.id("idOfButton"));
         button.click();
         String color=button.getCssValue("color");
